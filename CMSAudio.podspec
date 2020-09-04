@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "CMSAudio"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.1"
   spec.summary      = "Modules and components framework for iOS."
   spec.authors      = { 'HJ' => '2033253382@qq.com' }  
   # This description is used to generate tags and improve search results.
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/CMSAudio.podspec"
+  spec.homepage     = "https://github.com/whhaijun/audioPlayView"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  # spec.license      = "MIT (example)"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -45,7 +45,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "" => "" }
+  # spec.author             = { "" => "" }
   # Or just: spec.author    = ""
   # spec.authors            = { "" => "" }
   # spec.social_media_url   = "https://twitter.com/"
@@ -57,7 +57,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -72,7 +72,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/CMSAudio.podspec.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -83,10 +83,15 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "CMSAudio/CMSAudio/**/*.{swift}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
+
+  spec.swift_version = '5.0'
+  spec.frameworks = 'Foundation','AVFoundation', 'CoreFoundation', 'UIKit'
+  # 是否是静态库 这个地方很重要 假如不写这句打出来的包 就是动态库 不能使用 一运行会报错 image not found
+  spec.static_framework  =  true
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -101,6 +106,13 @@ Pod::Spec.new do |spec|
   # spec.resources = "Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
+
+  # 资源，比如图片，音频文件等
+  spec.resource_bundles = {
+     # 这是个数组，可以添加其他bundle
+     'CMSAudio' => ['CMSAudio/Assets/*.png']
+  }
+  
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -126,5 +138,19 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
+
+spec.subspec 'CMSAudio' do |macros|
+
+      # 音频播放 音频类型枚举
+      macros.dependency 'CMSAudio/CMSAudioEnum'
+      # 音频播放 view
+      macros.dependency 'CMSAudio/CMSAudioView'
+      # 音频播放 自定义 Slider 改变滑块大小
+      macros.dependency 'CMSAudio/CMSCustomSlider'
+
+      
+      macros.source_files = 'CMSAudio/CMSAudio/**/*.{swift}'
+      # macros.public_header_files = 'CMSPaaS/Modules/Home/**/*.{h}'
+    end
 
 end
