@@ -140,8 +140,8 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-spec.subspec 'CMSAudio' do |basie|
-basie.subspec 'CMSAudio' do |macros|
+spec.subspec 'CMSAudio' do | macros |
+  # basie.subspec 'CMSAudio' do |macros|
       # 音频播放 音频类型枚举
       macros.dependency 'CMSAudio/CMSAudioEnum'
       # 音频播放 view
@@ -150,8 +150,9 @@ basie.subspec 'CMSAudio' do |macros|
       macros.dependency 'CMSAudio/CMSCustomSlider'
 
       
-      macros.source_files = 'CMSAudio/CMSAudio/**/*.{swift}'
+      macros.source_files = 'CMSAudio/**/*.{swift}'
+      # macros.source_files = 'CMSAudio/CMSAudio/**/*.{swift}'
       # macros.public_header_files = 'CMSPaaS/Modules/Home/**/*.{h}'
     end
-end
+  # end
 end
