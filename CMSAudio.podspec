@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "audioPlayView"
+  spec.name         = "CMSAudio"
   spec.version      = "1.0.1"
   spec.summary      = "Modules and components framework for iOS."
   spec.authors      = { 'HJ' => '2033253382@qq.com' }  
@@ -32,8 +32,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
