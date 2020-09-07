@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "CMSAudio"
-  spec.version      = "1.0.1"
+  spec.version      = "0.0.1"
   spec.summary      = "Modules and components framework for iOS."
   spec.authors      = { 'HJ' => '2033253382@qq.com' }  
   # This description is used to generate tags and improve search results.
@@ -73,7 +73,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => 'tag => 'v0.0.1'' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,11 +89,13 @@ Pod::Spec.new do |spec|
 
   # spec.public_header_files = "Classes/**/*.h"
 
+
+
   spec.swift_version = '5.0'
   spec.frameworks = 'Foundation','AVFoundation', 'CoreFoundation', 'UIKit'
   # 是否是静态库 这个地方很重要 假如不写这句打出来的包 就是动态库 不能使用 一运行会报错 image not found
   spec.static_framework  =  true
-
+  spec.requires_arc = true
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
