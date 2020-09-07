@@ -73,7 +73,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => 'v0.0.1' }
+  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => 'v0.0.2' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -106,7 +106,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  spec.resources = "CMSAudio/Assets/**/*.png"
+  spec.resources = "CMSAudio/Assets/**/*.{png}"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
