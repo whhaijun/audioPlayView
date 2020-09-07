@@ -73,7 +73,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => 'tag => 'v0.0.1'' }
+  spec.source       = { :git => "https://github.com/whhaijun/audioPlayView.git", :tag => 'v0.0.1' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
