@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "CMSAudio"
+  spec.name         = "audioPlayView"
   spec.version      = "1.0.1"
   spec.summary      = "Modules and components framework for iOS."
   spec.authors      = { 'HJ' => '2033253382@qq.com' }  
@@ -104,15 +104,15 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  spec.resources = "CMSAudio/Assets/*.png"
+  # spec.resources = "CMSAudio/Assets/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
   # 资源，比如图片，音频文件等
-  spec.resource_bundles = {
+  # spec.resource_bundles = {
      # 这是个数组，可以添加其他bundle
-     'CMSAudio' => ['CMSAudio/Assets/*.png']
-  }
+    #  'CMSAudio' => ['CMSAudio/Assets/*.png']
+  # }
   
 
 
