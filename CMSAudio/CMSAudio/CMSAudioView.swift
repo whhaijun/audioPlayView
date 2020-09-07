@@ -342,6 +342,9 @@ public class CMSAudioView: UIView {
     
     fileprivate func tintcolorChange(iv:UIImageView,name: String , color:UIColor) ->UIImage{
         var queImg = UIImage(named: name)
+        guard let _ = queImg else {
+            return UIImage.init()
+        }
         queImg = queImg?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         iv.tintColor = color
         return queImg!

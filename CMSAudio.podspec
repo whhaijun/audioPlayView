@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "CMSAudio"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Modules and components framework for iOS."
   spec.authors      = { 'HJ' => '2033253382@qq.com' }  
   # This description is used to generate tags and improve search results.
@@ -106,7 +106,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "CMSAudio/Assets/*.png"
+  spec.resources = "CMSAudio/Assets/**/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
