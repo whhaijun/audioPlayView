@@ -113,7 +113,7 @@ Pod::Spec.new do |spec|
   # 资源，比如图片，音频文件等
   spec.resource_bundles = {
      # 这是个数组，可以添加其他bundle
-     'CMSAudio' => ['CMSAudio/Assets/*.png']
+     'CMSAudio' => ['CMSAudio/Assets.xcassets']
   }
   
 
